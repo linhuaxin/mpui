@@ -1,0 +1,50 @@
+.xt-table {
+    color: #444;
+    width: 100%;
+    background-color: #fff;
+}
+
+.xt-table__wrapper {
+    border-top: 1px solid #BCBCBC;
+    border-left: 1px solid #BCBCBC;
+}
+
+.xt-table__header {
+    display: flex;
+}
+
+.xt-table__header .xt-table__col {
+    color: #fff;
+    background-color: #23b4d8;
+}
+
+.xt-table__row {
+    display: flex;
+}
+
+.xt-table__check-col,
+.xt-table__col {
+    flex-shrink: 0;
+    word-break: break-all;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid #BCBCBC;
+    border-bottom: 1px solid #BCBCBC;
+}
+
+.xt-table__check-col {
+    padding: 6rpx 4rpx 6rpx 16rpx;
+}
+
+.xt-table__col {
+    padding: 6rpx 4rpx;
+    width: 100px;
+}
+
+.xt-table__col-number {
+    border: 1rpx solid #ccc;
+    border-radius: 8rpx;
+    padding-left: 6rpx;
+    text-align: center;
+}

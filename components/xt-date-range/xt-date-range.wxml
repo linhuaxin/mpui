@@ -1,0 +1,24 @@
+<view class="xt-date-range">
+  <picker
+    mode="date"
+    value="{{ beginDate }}"
+    start="{{ minBeginDate }}"
+    end="{{ endDate }}"
+    disabled="{{ readonly }}"
+    bindchange="beginDateChange"
+  >
+    {{ beginDate }}
+  </picker>
+  <text class="xt-date-range__separator">—</text>
+  <picker
+    mode="date"
+    value="{{ endDate }}"
+    start="{{ beginDate }}"
+    end="{{ maxEndDate }}"
+    disabled="{{ readonly }}"
+    bindchange="endDateChange"
+  >
+    {{ endDate }}
+  </picker>
+  <image class="xt-date-range__icon" src="./images/date.png"/>
+</view>

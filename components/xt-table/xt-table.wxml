@@ -1,0 +1,60 @@
+<view class="xt-table">
+  <scroll-view scroll-x scroll-y class="xt-table__wrapper">
+    <view class="xt-table__header">
+      <view
+        wx:if="{{ checkable === true && !readonly }}"
+        class="xt-table__check-col"
+      >
+        <checkbox
+          checked="{{ isAllChecked === true }}"
+          data-index="{{ index }}"
+          bindtap="allCheckChange"
+        ></checkbox>
+      </view>
+      <view
+        class="xt-table__col"
+        style="width:{{item.width}}px"
+        wx:for="{{ columns }}"
+        wx:key="{{ index }}">{{ item.title }}</view>
+    </view>
+    <view class="xt-table__body">
+      <view
+        class="xt-table__row"
+        wx:key="{{ index }}"
+        wx:for="{{ list }}"
+        wx:for-item="row"
+      >
+        <view
+          wx:if="{{ checkable === true && !readonly }}"
+          class="xt-table__check-col"
+        >
+          <checkbox
+            checked="{{ row.isChecked === true }}"
+            data-index="{{ index }}"
+            bindtap="checkChange"
+          ></checkbox>
+        </view>
+        <block
+          wx:for="{{ columns }}"
+          wx:key="{{ index }}"
+          wx:for-item="column"
+          wx:for-index="columnIndex"
+        >
+          <view class="xt-table__col" style="width:{{column.width}}px">
+            <input
+              class="xt-table__col-number"
+              wx:if="{{ column.type === 'number' && !readonly }}"
+              type="number"
+              maxlength="100"
+              value="{{ row[column.name] }}"
+              data-index="{{ index }}"
+              data-name="{{ column.name }}"
+              bindinput="numberChange"
+            />
+            <text wx:else>{{ row[column.name] }}</text>
+          </view>
+        </block>
+      </view>
+    </view>
+  </scroll-view>
+</view>

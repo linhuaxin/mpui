@@ -1,0 +1,14 @@
+<view class="xt-picker">
+  <picker
+    mode="{{ mode }}"
+    class="xt-picker__picker"
+    fields="{{ fields }}"
+    disabled="{{ readonly }}"
+    bindchange="change"
+  >
+    <view class="xt-picker__content">
+      <text>{{ dateValue }}</text>
+      <image class="xt-picker__icon-date" src="./images/date.png"/>
+    </view>
+  </picker>
+</view>

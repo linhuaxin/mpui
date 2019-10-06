@@ -1,0 +1,19 @@
+.xt-date-range {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    font-size: 32rpx;
+    height: 48px;
+}
+
+.xt-date-range__separator {
+    margin-left: 12rpx;
+    margin-right: 12rpx;
+}
+
+.xt-date-range__icon {
+    margin-left: 12rpx;
+    width: 36rpx;
+    height: 36rpx;
+}

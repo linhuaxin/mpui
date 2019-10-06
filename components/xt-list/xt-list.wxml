@@ -1,0 +1,15 @@
+<scroll-view
+  class="xt-list"
+  scroll-y="true"
+  enable-back-to-top="true"
+>
+  <view wx:for="{{ list }}" wx:key="{{ index }}">
+    <view
+      class="orderlist"
+      bindtap='jumpTo'
+      data-id="{{ item.id }}"
+    >
+      <slot></slot>
+    </view>
+  </view>
+</scroll-view>

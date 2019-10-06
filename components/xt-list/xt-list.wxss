@@ -1,0 +1,18 @@
+.xt-input {
+    display: flex;
+    padding: 12rpx;
+    border: 1rpx solid #ccc;
+    border-radius: 8rpx;
+}
+
+.xt-input__input {
+    flex-grow: 1;
+    margin-left: 6rpx;
+}
+
+.xt-input__icon {
+    position: relative;
+    top: 4rpx;
+    width: 36rpx;
+    height: 36rpx;
+}

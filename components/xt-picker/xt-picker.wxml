@@ -1,0 +1,14 @@
+<view class="xt-picker">
+  <picker
+    class="xt-picker__picker"
+    bindchange="change"
+    range="{{ options }}"
+    range-key="{{ rangeKey }}"
+    value="{{ index }}"
+  >
+    <view class="xt-picker__content">
+      <text class="xt-picker__text">{{ options[index][rangeKey] }}</text>
+      <image class="xt-picker__icon" src="./images/arrow-down.png"/>
+    </view>
+  </picker>
+</view>

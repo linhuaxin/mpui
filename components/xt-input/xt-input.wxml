@@ -1,0 +1,22 @@
+<view class="xt-input">
+  <image
+    wx:if="{{ showSearch === true }}"
+    class="xt-input__icon"
+    src="../../static/images/common/search.png"
+    bindtap="search"
+  />
+  <input
+    class="xt-input__input"
+    placeholder="{{ placeholder }}"
+    type="text"
+    bindblur="blur"
+    bindinput="input"
+    value="{{ value }}"
+  />
+  <image
+    wx:if="{{ showScan === true }}"
+    class="xt-input__icon"
+    src="../../static/images/common/scan.png"
+    bindtap="scan"
+  />
+</view>
